@@ -8,7 +8,7 @@ def api_root(request):
     return JsonResponse({
         "message": "Welcome to the Octofit API!",
         "urls": {
-            "users": "https://organic-space-sniffle-vwwxpq65pqx2pwp6-8000.app.github.dev/users/",
+            "users": "https://organic-space-sniffle-vwwxpq65pqx2pwp6-8000.app.github.dev/users/", # CODESPACE NAME: organic-space-sniffle-vwwxpq65pqx2pwp6-8000
             "teams": "https://organic-space-sniffle-vwwxpq65pqx2pwp6-8000.app.github.dev/teams/",
             "activities": "https://organic-space-sniffle-vwwxpq65pqx2pwp6-8000.app.github.dev/activities/",
             "leaderboard": "https://organic-space-sniffle-vwwxpq65pqx2pwp6-8000.app.github.dev/leaderboard/",
