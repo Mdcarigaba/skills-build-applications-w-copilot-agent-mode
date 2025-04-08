@@ -5,15 +5,16 @@ from .serializers import UserSerializer, TeamSerializer, ActivitySerializer, Lea
 from django.http import JsonResponse
 
 def api_root(request):
-    base_url = "https://organic-space-sniffle-vwwxpq65pqx2pwp6-8000.app.github.dev/api/v1"
+    base_url = request.build_absolute_uri('/').rstrip('/')
+    api_url = f"{base_url}/api/v1"
     return JsonResponse({
         "message": "Welcome to the Octofit API!",
         "urls": {
-            "users": f"{base_url}/users/", # CODESPACE NAME: organic-space-sniffle-vwwxpq65pqx2pwp6
-            "teams": f"{base_url}/teams/", # CODESPACE NAME: organic-space-sniffle-vwwxpq65pqx2pwp6
-            "activities": f"{base_url}/activities/", # CODESPACE NAME: organic-space-sniffle-vwwxpq65pqx2pwp6
-            "leaderboard": f"{base_url}/leaderboard/", # CODESPACE NAME: organic-space-sniffle-vwwxpq65pqx2pwp6
-            "workouts": f"{base_url}/workouts/", # CODESPACE NAME: organic-space-sniffle-vwwxpq65pqx2pwp6
+            "users": f"{api_url}/users/",
+            "teams": f"{api_url}/teams/",
+            "activities": f"{api_url}/activities/",
+            "leaderboard": f"{api_url}/leaderboard/",
+            "workouts": f"{api_url}/workouts/",
         },
     })
 
