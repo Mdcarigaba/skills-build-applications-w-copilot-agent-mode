@@ -23,6 +23,7 @@ def api_root(request):
         },
     })
 
+# Added suffix method to each viewset
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
