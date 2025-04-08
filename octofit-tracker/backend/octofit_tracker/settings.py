@@ -143,3 +143,6 @@ CORS_ALLOW_METHODS = [
 CORS_ALLOW_HEADERS = [
     "*",
 ]
+CORS_ALLOWED_ORIGINS = [
+    'https://organic-space-sniffle-vwwxpq65pqx2pwp6-3000.app.github.dev',
+]
