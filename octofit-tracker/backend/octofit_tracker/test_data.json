@@ -1,0 +1,21 @@
+{
+  "users": [
+    {"username": "john_doe", "email": "john@example.com", "password": "password123"},
+    {"username": "jane_doe", "email": "jane@example.com", "password": "password123"}
+  ],
+  "teams": [
+    {"name": "Team Alpha", "members": ["john_doe", "jane_doe"]}
+  ],
+  "activities": [
+    {"name": "Running", "calories_burned_per_minute": 10},
+    {"name": "Cycling", "calories_burned_per_minute": 8}
+  ],
+  "leaderboard": [
+    {"username": "john_doe", "points": 100},
+    {"username": "jane_doe", "points": 80}
+  ],
+  "workouts": [
+    {"username": "john_doe", "activity": "Running", "duration_minutes": 30},
+    {"username": "jane_doe", "activity": "Cycling", "duration_minutes": 45}
+  ]
+}
