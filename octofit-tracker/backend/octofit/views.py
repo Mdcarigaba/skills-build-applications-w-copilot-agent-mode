@@ -32,6 +32,10 @@ class UserViewSet(viewsets.ModelViewSet):
     def suffix(self, request):
         return Response({'suffix': 'users'})
 
+    @action(detail=False, methods=['get'])
+    def codespace_suffix(self, request):
+        return Response({'codespace_suffix': 'users'})
+
 class TeamViewSet(viewsets.ModelViewSet):
     queryset = Team.objects.all()
     serializer_class = TeamSerializer
@@ -39,6 +43,10 @@ class TeamViewSet(viewsets.ModelViewSet):
     @action(detail=False, methods=['get'])
     def suffix(self, request):
         return Response({'suffix': 'teams'})
+
+    @action(detail=False, methods=['get'])
+    def codespace_suffix(self, request):
+        return Response({'codespace_suffix': 'teams'})
 
 class ActivityViewSet(viewsets.ModelViewSet):
     queryset = Activity.objects.all()
@@ -48,6 +56,10 @@ class ActivityViewSet(viewsets.ModelViewSet):
     def suffix(self, request):
         return Response({'suffix': 'activities'})
 
+    @action(detail=False, methods=['get'])
+    def codespace_suffix(self, request):
+        return Response({'codespace_suffix': 'activities'})
+
 class LeaderboardViewSet(viewsets.ModelViewSet):
     queryset = Leaderboard.objects.all()
     serializer_class = LeaderboardSerializer
@@ -56,6 +68,10 @@ class LeaderboardViewSet(viewsets.ModelViewSet):
     def suffix(self, request):
         return Response({'suffix': 'leaderboard'})
 
+    @action(detail=False, methods=['get'])
+    def codespace_suffix(self, request):
+        return Response({'codespace_suffix': 'leaderboard'})
+
 class WorkoutViewSet(viewsets.ModelViewSet):
     queryset = Workout.objects.all()
     serializer_class = WorkoutSerializer
@@ -63,3 +79,7 @@ class WorkoutViewSet(viewsets.ModelViewSet):
     @action(detail=False, methods=['get'])
     def suffix(self, request):
         return Response({'suffix': 'workouts'})
+
+    @action(detail=False, methods=['get'])
+    def codespace_suffix(self, request):
+        return Response({'codespace_suffix': 'workouts'})
