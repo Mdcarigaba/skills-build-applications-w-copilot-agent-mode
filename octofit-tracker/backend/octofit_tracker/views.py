@@ -10,7 +10,7 @@ def api_root(request):
     """
     Root API endpoint providing links to other endpoints.
     """
-    base_url = request.build_absolute_uri('/').rstrip('/')
+    base_url = "https://organic-space-sniffle-vwwxpq65pqx2pwp6-8000.app.github.dev"  # Use the codespace URL
     api_url = f"{base_url}/api/v1"  # Define the API versioning URL
     return JsonResponse({
         "message": "Welcome to the Octofit API!",

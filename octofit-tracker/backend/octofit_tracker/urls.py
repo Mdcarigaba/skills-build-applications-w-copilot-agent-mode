@@ -10,6 +10,7 @@ router.register(r'leaderboard', LeaderboardViewSet)
 router.register(r'workouts', WorkoutViewSet)
 
 urlpatterns = [
+    path('api/v1/', api_root, name='api-root'),
     path('', api_root),
     path('', include(router.urls)),
 ]
