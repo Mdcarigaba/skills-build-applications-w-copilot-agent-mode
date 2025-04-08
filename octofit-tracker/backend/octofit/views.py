@@ -5,6 +5,9 @@ from .serializers import UserSerializer, TeamSerializer, ActivitySerializer, Lea
 from django.http import JsonResponse
 
 def api_root(request):
+    """
+    Root API endpoint providing links to other endpoints.
+    """
     base_url = request.build_absolute_uri('/').rstrip('/')
     return JsonResponse({
         "message": "Welcome to the Octofit API!",
