@@ -3,6 +3,8 @@ from rest_framework import viewsets
 from .models import User, Team, Activity, Leaderboard, Workout
 from .serializers import UserSerializer, TeamSerializer, ActivitySerializer, LeaderboardSerializer, WorkoutSerializer
 from django.http import JsonResponse
+from rest_framework.decorators import action
+from rest_framework.response import Response
 
 def api_root(request):
     """
@@ -24,24 +26,39 @@ def api_root(request):
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
-    suffix = 'users'
+
+    @action(detail=False, methods=['get'])
+    def suffix(self, request):
+        return Response({'suffix': 'users'})
 
 class TeamViewSet(viewsets.ModelViewSet):
     queryset = Team.objects.all()
     serializer_class = TeamSerializer
-    suffix = 'teams'
+
+    @action(detail=False, methods=['get'])
+    def suffix(self, request):
+        return Response({'suffix': 'teams'})
 
 class ActivityViewSet(viewsets.ModelViewSet):
     queryset = Activity.objects.all()
     serializer_class = ActivitySerializer
-    suffix = 'activities'
+
+    @action(detail=False, methods=['get'])
+    def suffix(self, request):
+        return Response({'suffix': 'activities'})
 
 class LeaderboardViewSet(viewsets.ModelViewSet):
     queryset = Leaderboard.objects.all()
     serializer_class = LeaderboardSerializer
-    suffix = 'leaderboard'
+
+    @action(detail=False, methods=['get'])
+    def suffix(self, request):
+        return Response({'suffix': 'leaderboard'})
 
 class WorkoutViewSet(viewsets.ModelViewSet):
     queryset = Workout.objects.all()
     serializer_class = WorkoutSerializer
-    suffix = 'workouts'
+
+    @action(detail=False, methods=['get'])
+    def suffix(self, request):
+        return Response({'suffix': 'workouts'})
