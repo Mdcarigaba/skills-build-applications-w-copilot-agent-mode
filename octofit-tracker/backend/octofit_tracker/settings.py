@@ -76,13 +76,14 @@ WSGI_APPLICATION = "octofit_tracker.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
-
+# Using djongo as the database engine to connect to MongoDB.
+# Ensure compatibility by using pymongo version 3.12 as specified in requirements.txt.
 DATABASES = {
     "default": {
-        "ENGINE": "djongo",
-        "NAME": "octofit_db",
-        "HOST": "localhost",
-        "PORT": 27017,
+        "ENGINE": "djongo",  # Djongo is a Django database backend for MongoDB
+        "NAME": "octofit_db",  # Name of the MongoDB database
+        "HOST": "localhost",  # MongoDB host
+        "PORT": 27017,  # MongoDB port
     }
 }
 
