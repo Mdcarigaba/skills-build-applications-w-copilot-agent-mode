@@ -25,7 +25,10 @@ SECRET_KEY = "django-insecure-1j(ta=*jvqt=965w!=cjx@o$s0!2x7k$g2%qsz9&n2n=_(4yx1
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = [
+    'localhost',
+    'organic-space-sniffle-vwwxpq65pqx2pwp6-8000.app.github.dev',
+]
 
 
 # Application definition

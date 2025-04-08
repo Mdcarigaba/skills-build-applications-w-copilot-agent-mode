@@ -2,6 +2,19 @@ from django.shortcuts import render
 from rest_framework import viewsets
 from .models import User, Team, Activity, Leaderboard, Workout
 from .serializers import UserSerializer, TeamSerializer, ActivitySerializer, LeaderboardSerializer, WorkoutSerializer
+from django.http import JsonResponse
+
+def api_root(request):
+    return JsonResponse({
+        "message": "Welcome to the Octofit API!",
+        "urls": {
+            "users": "https://organic-space-sniffle-vwwxpq65pqx2pwp6-8000.app.github.dev/users/",
+            "teams": "https://organic-space-sniffle-vwwxpq65pqx2pwp6-8000.app.github.dev/teams/",
+            "activities": "https://organic-space-sniffle-vwwxpq65pqx2pwp6-8000.app.github.dev/activities/",
+            "leaderboard": "https://organic-space-sniffle-vwwxpq65pqx2pwp6-8000.app.github.dev/leaderboard/",
+            "workouts": "https://organic-space-sniffle-vwwxpq65pqx2pwp6-8000.app.github.dev/workouts/",
+        },
+    })
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
