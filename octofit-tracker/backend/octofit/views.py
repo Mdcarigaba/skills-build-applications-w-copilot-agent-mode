@@ -9,14 +9,15 @@ def api_root(request):
     Root API endpoint providing links to other endpoints.
     """
     base_url = request.build_absolute_uri('/').rstrip('/')
+    api_url = f"{base_url}/api/v1"  # Define the API versioning URL
     return JsonResponse({
         "message": "Welcome to the Octofit API!",
         "urls": {
-            "users": f"{base_url}/users/",
-            "teams": f"{base_url}/teams/",
-            "activities": f"{base_url}/activities/",
-            "leaderboard": f"{base_url}/leaderboard/",
-            "workouts": f"{base_url}/workouts/",
+            "users": f"{api_url}/users/",
+            "teams": f"{api_url}/teams/",
+            "activities": f"{api_url}/activities/",
+            "leaderboard": f"{api_url}/leaderboard/",
+            "workouts": f"{api_url}/workouts/",
         },
     })
 
