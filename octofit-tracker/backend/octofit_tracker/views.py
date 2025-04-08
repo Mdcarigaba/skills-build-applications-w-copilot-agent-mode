@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from rest_framework import viewsets
-from .models import User, Team, Activity, Leaderboard, Workout
-from .serializers import UserSerializer, TeamSerializer, ActivitySerializer, LeaderboardSerializer, WorkoutSerializer
+from octofit.models import User, Team, Activity, Leaderboard, Workout
+from octofit.serializers import UserSerializer, TeamSerializer, ActivitySerializer, LeaderboardSerializer, WorkoutSerializer
 from django.http import JsonResponse
 from rest_framework.decorators import action
 from rest_framework.response import Response
